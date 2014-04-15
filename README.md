@@ -68,7 +68,7 @@ class UserRepository
   end
 end
 
-UserRepository.find(3) #=> 'annonymous'
+UserRepository.find(3).name #=> 'annonymous'
 ```
 
 ## Spec
