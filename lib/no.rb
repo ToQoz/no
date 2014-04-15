@@ -1,5 +1,6 @@
 require "no/version"
 
 module NO
-  # Your code goes here...
+  class NullObject < BasicObject
+  end
 end
