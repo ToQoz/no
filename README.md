@@ -74,24 +74,23 @@ UserRepository.find(3).name #=> 'annonymous'
 ## Spec
 
 ```
-
 NO::NullObject
   can expand by inheritance
-  to_a
+  #to_a
     should eq []
-  to_c
+  #to_c
     should eq (0+0i)
-  to_f
+  #to_f
     should eq 0.0
-  to_h
+  #to_h
     should eq {}
-  to_i
+  #to_i
     should eq 0
-  to_r
+  #to_r
     should eq (0/1)
-  to_s
+  #to_s
     should eq ""
-  rationalize
+  #rationalize
     should eq (0/1)
   #&
     NO::NullObject & object

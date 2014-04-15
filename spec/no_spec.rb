@@ -3,7 +3,7 @@ require 'spec_helper'
 # http://www.ruby-doc.org/core-2.1.1/NilClass.html
 describe NO::NullObject do
   %w(to_a to_c to_f to_h to_i to_r to_s rationalize).each do |method|
-    describe method do
+    describe "##{method}" do
       subject { described_class.new.send(method) }
       it { should eq(nil.send(method)) }
     end
