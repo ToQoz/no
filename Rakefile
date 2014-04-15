@@ -1,1 +1,17 @@
 require "bundler/gem_tasks"
+require "bundler/gem_helper"
+
+t = Bundler::GemHelper.new
+
+desc "Create tag #{t.send(:version_tag)}"
+task :tag do
+  if t.send(:already_tagged?)
+    return
+  end
+
+  t.send(:tag_version) do
+    t.send(:perform_git_push, 'origin master')
+    t.send(:perform_git_push, ' --tags origin master')
+    Bundler.ui.confirm "Pushed git commits and tags."
+  end
+end
