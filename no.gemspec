@@ -5,7 +5,7 @@ require 'no/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "no"
-  spec.version       = No::VERSION
+  spec.version       = NO::VERSION
   spec.authors       = ["Takatoshi Matsumoto"]
   spec.email         = ["toqoz403@gmail.com"]
   spec.summary       = %q{TODO: Write a short summary. Required.}

@@ -1,4 +1,4 @@
-# No
+# NO
 
 TODO: Write a gem description
 

@@ -1,5 +1,5 @@
 require "no/version"
 
-module No
+module NO
   # Your code goes here...
 end
