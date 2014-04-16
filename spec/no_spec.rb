@@ -10,15 +10,15 @@ describe NO::NullObject do
   end
 
   describe '#to_h' do
-    context 'Ruby version is 2.0.0 or later' do
-      if RUBY_VERSION >= '2.0.0'
+    context 'nil has to_h' do
+      if nil.respond_to?(:to_h)
         subject { described_class.new.to_h }
         it { should eq(nil.to_h) }
       end
     end
 
-    context 'Ruby version is earlier than 2.0.0' do
-      if RUBY_VERSION < '2.0.0'
+    context 'nil doesn\'t have to_h' do
+      unless nil.respond_to?(:to_h)
         subject { described_class.new.to_h }
         it { should eq(nil) }
       end
