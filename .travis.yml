@@ -1,0 +1,13 @@
+lang: ruby
+rvm:
+  - 1.9.3
+  - 2.0.0
+  - 2.1.1
+  - rbx
+  - jruby
+notifications:
+  email:
+    recipients:
+      - toqoz403@gmail.com
+    on_success: change
+    on_failure: always
