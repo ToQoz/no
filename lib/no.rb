@@ -17,7 +17,7 @@ module NO
     end
 
     def ^ a
-      if a.nil? # for "NO::NullObject ^ NO::NullObject returns false"
+      if a.is_a?(::NO::NullObject) # for "NO::NullObject ^ NO::NullObject returns false"
         false
       else
         nil.^ a
@@ -25,7 +25,7 @@ module NO
     end
 
     def | a
-      if a.nil? # for "NO::NullObject | NO::NullObject returns false"
+      if a.is_a?(::NO::NullObject) # for "NO::NullObject | NO::NullObject returns false"
         false
       else
         nil.| a
