@@ -1,6 +1,9 @@
 require "bundler/gem_tasks"
 require "bundler/gem_helper"
 
+require 'rspec/core/rake_task'
+RSpec::Core::RakeTask.new(:spec)
+
 t = Bundler::GemHelper.new
 
 desc "Create tag #{t.send(:version_tag)}"
@@ -13,3 +16,5 @@ task :tag do
     end
   end
 end
+
+task :default => :spec
