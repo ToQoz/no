@@ -32,14 +32,6 @@ module NO
       end
     end
 
-    def inspect
-      "NO::NullObject"
-    end
-
-    def pretty_inspect
-      "NO::NullObject\n"
-    end
-
     def method_missing name, *args
       if nil.respond_to?(name)
         nil.send(name, *args)
