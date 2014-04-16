@@ -2,10 +2,26 @@ require 'spec_helper'
 
 # http://www.ruby-doc.org/core-2.1.1/NilClass.html
 describe NO::NullObject do
-  %w(to_a to_c to_f to_h to_i to_r to_s rationalize).each do |method|
+  %w(to_a to_c to_f to_i to_r to_s rationalize).each do |method|
     describe "##{method}" do
       subject { described_class.new.send(method) }
       it { should eq(nil.send(method)) }
+    end
+  end
+
+  describe '#to_h' do
+    context 'Ruby version is 2.0.0 or later' do
+      if RUBY_VERSION >= '2.0.0'
+        subject { described_class.new.to_h }
+        it { should eq(nil.to_h) }
+      end
+    end
+
+    context 'Ruby version is earlier than 2.0.0' do
+      if RUBY_VERSION < '2.0.0'
+        subject { described_class.new.to_h }
+        it { should eq(nil) }
+      end
     end
   end
 

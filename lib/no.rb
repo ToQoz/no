@@ -3,6 +3,8 @@ require "no/version"
 module NO
   class NullObject < Object
     %w(to_a to_c to_f to_h to_i to_r to_s rationalize & ! nil?).each do |method|
+      next unless nil.respond_to?(method)
+
       define_method(method) do |*args|
         nil.send(method, *args)
       end
