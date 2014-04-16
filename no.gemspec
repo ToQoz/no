@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = NO::VERSION
   spec.authors       = ["Takatoshi Matsumoto"]
   spec.email         = ["toqoz403@gmail.com"]
-  spec.summary       = %q{Support creating null object in Ruby.}
-  spec.description   = %q{Support creating null object in Ruby. This basically behaves as nil and when a method is not found, returns nil.}
+  spec.summary       = %q{Supporter for creating null object in Ruby.}
+  spec.description   = %q{Supporter for creating null object in Ruby. This basically behaves as nil and when a method is not found, returns nil.}
   spec.homepage      = "https://github.com/ToQoz/no"
   spec.license       = "MIT"
 

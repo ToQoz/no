@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/ToQoz/no.png?branch=master)](https://travis-ci.org/ToQoz/no)
 
-Support creating null object in Ruby. NO::NullObject basically bahaves as nil.
+Supporter for creating null object in Ruby. NO::NullObject basically bahaves as nil.
 
 1. NO::NullObject basically delegates to nil.
 2. if nil doesn't respond to a method, NO::NullObject returns nil.
