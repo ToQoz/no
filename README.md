@@ -1,6 +1,6 @@
 # NO
 
-[![Build Status](https://travis-ci.org/ToQoz/no?branch=master)](https://travis-ci.org/ToQoz/no)
+[![Build Status](https://travis-ci.org/ToQoz/no.png?branch=master)](https://travis-ci.org/ToQoz/no)
 
 Support creating null object in Ruby. NO::NullObject basically bahaves as nil.
 
